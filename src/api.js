@@ -3,7 +3,6 @@
 //Base URL
 const base_url = `https://api.rawg.io/api/games?key=${process.env.REACT_APP_RAWG_API}`;
 const base_url_no_key = "https://api.rawg.io/api/";
-//const apiURL = `?key=${process.env.REACT_APP_RAWG_API}`;
 
 //Getting the month
 const getCurrentMonth = () => {
@@ -45,7 +44,6 @@ export const newGamesURL = () => `${base_url}${newGames}`;
 //console.log(upcomingGamesURL());
 //console.log(newGamesURL());
 //DETAILS
-//const gameDetailsURL = (game_id) => `${base_url_no_key}games/${game_id}$apiURL`;
 //url is good
 export const gameDetailsURL = (game_id) =>
   `${base_url_no_key}games/${game_id}?key=${process.env.REACT_APP_RAWG_API}`; //need "/" after "api/games" => "api/games/"
