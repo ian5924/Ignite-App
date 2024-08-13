@@ -1,7 +1,10 @@
 import React from "react";
 //Components and pages
 import Home from "./pages/Home";
-import GlobalStyles, { createGlobalStyle } from "./components/GlobalStyles";
+import Nav from "./components/Nav";
+//Styles
+import GlobalStyles from "./components/GlobalStyles";
+//Router
 import { Route, Routes } from "react-router-dom";
 //<Route path={["/game/:id", "/"]} >
 
@@ -11,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
+      <Nav />
       <Routes>
         <Route path="/game/:id" element={<Home />}></Route>
         <Route path="/" element={<Home />}></Route>
