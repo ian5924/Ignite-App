@@ -52,5 +52,9 @@ export const gameDetailsURL = (game_id) =>
 export const gameScreenshotURL = (game_id) =>
   `${base_url_no_key}games/${game_id}/screenshots?key=${process.env.REACT_APP_RAWG_API}`; //need "/" after "api/games" => "api/games/"
 
+//Searched game
+export const searchGameUrl = (game_name) =>
+  `${base_url_no_key}games?key=${process.env.REACT_APP_RAWG_API}&search=${game_name}&page_size=9`;
+
 //quake id 968497
 //console.log(gameScreenshotURL());
